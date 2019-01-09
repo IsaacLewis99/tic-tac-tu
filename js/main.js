@@ -166,3 +166,40 @@ function isWinner() {
   
   return false;
 }
+
+function resetBoard() {
+  console.log('resetting');
+  
+  gameBoard = ['', '', '', '', '', '', '', '', '']; 
+  
+  let spaceToAddToken = document.querySelectorAll('.letter');
+  spaceToAddToken.forEach( square => {
+    square.textContent = '';
+    square.parentElement.classList.remove('board__space--winner');
+  });
+
+  turn = 0;
+  winner = false;
+
+  let currentPlayerText = document.querySelector('.board___player-turn');
+  currentPlayerText.innerHTML = `
+    <span class="name--style">${playerX.name}</span>, you are up!
+    <div class="u-r-winner"></div>
+  `
+
+  addSpaceClickListener();
+}
+
+function addSpaceClickListener() {
+  const spaces = document.querySelectorAll('.board__space');
+  spaces.forEach( space => {
+    space.addEventListener('click', makeMove);
+  });
+}
+
+function removeSpaceClickListener() {
+  let allSpaces = document.querySelectorAll('.board__space');
+  allSpaces.forEach( space => {
+    space.removeEventListener('click', makeMove);
+  });
+}
