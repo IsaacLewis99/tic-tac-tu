@@ -103,6 +103,12 @@ function changeBoardHeaderNames() {
   }
 }
 
+function checkIfTie() {
+  if (turn > 7) {
+    alert("it's a tie")
+  }
+}
+
 function isWinner() {
   const winningSequences = [
     [0, 1, 2],
@@ -201,5 +207,21 @@ function removeSpaceClickListener() {
   let allSpaces = document.querySelectorAll('.board__space');
   allSpaces.forEach( space => {
     space.removeEventListener('click', makeMove);
+  });
+}
+
+// Return current player
+function currentPlayer() {
+  return turn % 2 === 0 ? 'X' : 'O';
+}
+
+// Resize boards in the event where browser is resized
+window.addEventListener("resize", onResize);
+function onResize() {
+  let allSpaces = document.querySelectorAll('.board__space');
+  let spaceHeight = allSpaces[0].offsetWidth;
+  
+  allSpaces.forEach( space => {
+    space.style.height = `${spaceHeight}px`;
   });
 }
