@@ -52,7 +52,7 @@ function buildBoard() {
   resetContainer.classList.remove('reset--hidden');
 
   onResize();
-  addCellClickListener();
+  addSpaceClickListener();
   changeBoardHeaderNames();
 }
 
@@ -61,7 +61,7 @@ function makeMove(event) {
   console.log(turn);
   
   let currentSpace = parseInt(event.currentTarget.firstElementChild.dataset.id);
-  let spaceToAddToken = document.querySelector(`[data-id='${currentCell}']`);
+  let spaceToAddToken = document.querySelector(`[data-id='${currentSpace}']`);
   
   if (spaceToAddToken.innerHTML !== '') {
     console.log('This space is already taken.');
@@ -91,14 +91,78 @@ function changeBoardHeaderNames() {
     let currentPlayerText = document.querySelector('.board___player-turn');
     if (currentPlayer() === 'X') {
       currentPlayerText.innerHTML = `
-        <span class="name--style">${playerX.name}</span>, you are up!
-        <div class="u-r-winner"></div>
+        <span class="name--style">${playerX.name}</span>, it's your turn!
+        <div class="thewinner"></div>
       `
     }  else {
       currentPlayerText.innerHTML = `
-        <span class="name--style">${playerY.name}</span>, you are up.
-        <div class="u-r-winner"></div>
+        <span class="name--style">${playerY.name}</span>, it's your turn!
+        <div class="thewinner"></div>
       `
     }
   }
+}
+
+function isWinner() {
+  const winningSequences = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6]
+  ];
+
+  winningSequences.forEach( winningCombos => {
+    let space1 = winningCombos[0];
+    let space2 = winningCombos[1];
+    let space3 = winningCombos[2];
+    if (
+      gameBoard[space1] === currentPlayer() &&
+      gameBoard[space2] === currentPlayer() &&
+      gameBoard[space3] === currentPlayer()
+    ) {
+
+      
+      const spaces = document.querySelectorAll('.board__space');
+      let letterId1 = document.querySelector(`[data-id='${space1}']`);
+      let letterId2 = document.querySelector(`[data-id='${space2}']`);
+      let letterId3 = document.querySelector(`[data-id='${space3}']`);
+      
+      spaces.forEach( space => {
+        let spaceId = space.firstElementChild.dataset.id;	
+
+        if (spaceId == space1 || spaceId == space2 || spaceId == space3 ) {
+          space.classList.add('board__space--winner');
+        }
+      });
+
+      let currentPlayerText = document.querySelector('.board___player-turn');
+      if (currentPlayer() === 'X') {
+        currentPlayerText.innerHTML = `
+          <div class="congratulations">Congratulations ${playerX.name}</div>
+          <div class="thewinner">You are our winner!</div>
+        `;
+        winner = true;
+        removeSpaceClickListener();
+        return true;
+      } else {
+        currentPlayerText.innerHTML = `
+          <div class="congratulations">Congratulations ${playerY.name}</div>
+          <div class="thewinner">You are our winner!</div>
+        `;
+        winner = true;
+        removeSpaceClickListener();
+        return true;
+      }
+    }
+  });
+
+  if (!winner) {
+    checkIfTie();
+  }
+  
+  return false;
 }
