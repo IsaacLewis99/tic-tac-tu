@@ -7,7 +7,7 @@ var con = mysql.createConnection({
   database: "tic-tac-tu"
 });
 
-var sql_create_users_table = "CREATE TABLE users(user_id SERIAL PRIMARY KEY, name VARCHAR(60), email VARCHAR(60), password TEXT);"
+var sql_create_users_table = "CREATE TABLE users(id SERIAL PRIMARY KEY, name VARCHAR(60), email VARCHAR(60), password TEXT);"
 
 con.connect(function(err) {
   if (err) throw err;
