@@ -45,3 +45,60 @@ function addPlayers(event) {
   // Initialise board once players have entered their names
   buildBoard();
 }
+
+// Building the Board
+function buildBoard() {
+  let resetContainer = document.querySelector('.reset');
+  resetContainer.classList.remove('reset--hidden');
+
+  onResize();
+  addCellClickListener();
+  changeBoardHeaderNames();
+}
+
+// Click event when player attempts to make a move on specific space
+function makeMove(event) {
+  console.log(turn);
+  
+  let currentSpace = parseInt(event.currentTarget.firstElementChild.dataset.id);
+  let spaceToAddToken = document.querySelector(`[data-id='${currentCell}']`);
+  
+  if (spaceToAddToken.innerHTML !== '') {
+    console.log('This space is already taken.');
+    return;
+  } else {
+    if (currentPlayer() === 'X') {
+      spaceToAddToken.textContent = currentPlayer();
+      gameBoard[currentSpace] = 'X';
+    } else {
+      spaceToAddToken.textContent = currentPlayer();
+      gameBoard[currentSpace] = 'O';
+    }
+  }
+    
+  // Check if there is a winner at the moment
+  isWinner();
+    
+  // Updating turn count to switch the turn to the other player
+  turn ++;
+
+  // Change board header information
+  changeBoardHeaderNames();
+}
+
+function changeBoardHeaderNames() {
+  if (!winner) {
+    let currentPlayerText = document.querySelector('.board___player-turn');
+    if (currentPlayer() === 'X') {
+      currentPlayerText.innerHTML = `
+        <span class="name--style">${playerX.name}</span>, you are up!
+        <div class="u-r-winner"></div>
+      `
+    }  else {
+      currentPlayerText.innerHTML = `
+        <span class="name--style">${playerY.name}</span>, you are up.
+        <div class="u-r-winner"></div>
+      `
+    }
+  }
+}
