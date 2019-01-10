@@ -28,6 +28,7 @@ app.get('/logout', (req, res) => {
   req.session.userID = null;
   res.sendFile(__dirname + '/views/logout.html');
 });
+
 app.post('/login', auth.login);
 app.post('/register', auth.register);
 app.listen(port, () => console.log(`The app is running on port: ${port}! Make sure to open it in your browser!`));
