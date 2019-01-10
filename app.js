@@ -21,8 +21,7 @@ app.use(function(req, res, next) {
   next();
 });
 var sess;
-app.get('/play', (req, res) => res.sendFile(__dirname + '/views/play.html'));
-app.get('/register', (req, res) => res.sendFile(__dirname + '/views/register.html'));
+app.get('/', (req, res) => res.sendFile(__dirname + '/views/register.html'));
 app.get('/login',(req, res) => res.sendFile(__dirname + '/views/login.html'));
 app.get('/playername',(req, res) => res.sendFile(__dirname + '/views/playername.html'));
 
