@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica", sans-serif;
+  box-sizing: border-box;
+}
+
+.board___player-turn {
+  text-align: center;
+  margin: 10px 0 10px;
+  height: 54px;
+}
+
+.board___player1-score {
+  text-align: center;
+}
+
+.board___player2-score {
+  text-align: center;
+}
+
+.board__container {
+  width: 40%;
+  background-color: red;
+  margin: 0 auto;
+  font-size: 0;
+}
+
+.board__space {
+  width: calc(100% / 3);
+  display: inline-block;
+  font-size: 30px;
+  text-align: center;
+}
+
+.letter {
+  position: relative;
+}
