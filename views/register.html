@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <header>Tic-Tac-Tu</header>
+  <meta charset="UTF-8">
+  <div class="register">
+    <link rel="stylesheet" type="text/css" href="/theme.css">
+    <nav class="navbar" role="navigation" style="padding-left:130px;">
+      <ul class="nav navbar-nav">
+        <li><a href="/play">Play</a></li>
+        <li class="active"><a href="/register">Register</a></li>
+        <li><a href="/login">Login</a></li>
+        <li style="float:right"><a href="/logout">Logout</a></li>
+      </ul>
+    </nav>
+  </div>
+</head>
+<body>
+  <div class="jumbotron">
+    <p>Register here</p>
+    <form action="/register" method="POST" class="form-horizontal">
+          <input type="text" name="name" placeholder="Name"><br>
+          <input type="text" email="email_r" name="email" placeholder="Email"><br>
+          <input type="password" password="password_r" name="password" placeholder="Password"><br>
+          <input type="submit" action = "login" name="Submit" value="Enter" class="btn"><br>
+          <a href="login">Are you already registered? Log in</a>
+     </form>
+</div>
+</body>
+</html>
