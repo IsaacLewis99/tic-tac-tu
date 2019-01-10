@@ -1,5 +1,12 @@
 const Sequelize = require('sequelize');
 const sequelize = new Sequelize('mysql://root:password@127.0.0.1:3306/tic-tac-tu');
+// //const sequelize = new Sequelize('sequelize test', 'root', null, {
+//   dialect: "mysql",
+//   host: "127.0.0.1",
+   // define: {
+   //   timestamps: false
+   // }
+// });
 
 sequelize.authenticate().then(() => {
   console.log('Connection established');
@@ -20,6 +27,14 @@ const Users = sequelize.define('users', {
   },
   password: {
     type: Sequelize.STRING
+  },
+  createdAt: {
+    field: 'created_at',
+    type: Sequelize.DATE,
+  },
+  updatedAt: {
+    field: 'updated_at',
+    type: Sequelize.TIME,
   }
 });
 exports.register = function(req, res) {
