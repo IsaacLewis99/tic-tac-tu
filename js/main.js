@@ -5,6 +5,8 @@ window.addEventListener('load', app);
 let gameBoard = ['', '', '', '', '', '', '', '', '']; 
 let turn = 0; // Keeping track on if it's X or O player's turn
 let winner = false;
+let scoreOne = 0;
+let scoreTwo = 0;
 
 // Creating a player
 const player = (name) => {
@@ -149,17 +151,19 @@ function isWinner() {
       if (currentPlayer() === 'X') {
         currentPlayerText.innerHTML = `
           <div class="congratulations">Congratulations ${playerX.name}</div>
-          <div class="thewinner">You are our winner!</div>
+          <div class="thewinner">You are the winner!</div>
         `;
         winner = true;
+        updateScore();
         removeSpaceClickListener();
         return true;
       } else {
         currentPlayerText.innerHTML = `
           <div class="congratulations">Congratulations ${playerY.name}</div>
-          <div class="thewinner">You are our winner!</div>
+          <div class="thewinner">You are the winner!</div>
         `;
         winner = true;
+        updateScore();
         removeSpaceClickListener();
         return true;
       }
@@ -224,4 +228,21 @@ function onResize() {
   allSpaces.forEach( space => {
     space.style.height = `${spaceHeight}px`;
   });
+}
+
+function updateScore() {
+  let scoreOneText = document.querySelector('.board___player1-score');
+  let scoreTwoText = document.querySelector('.board___player2-score');
+
+  if (currentPlayer() === 'X') {
+    scoreOne ++;
+  } else {
+    scoreTwo ++;
+  }
+  scoreOneText.innerHTML = `
+  <div class="thescore">${playerX.name}: ${scoreOne}</div>
+  `;
+  scoreTwoText.innerHTML = `
+  <div class="thescore2">${playerY.name}: ${scoreTwo}</div>
+  `;
 }
