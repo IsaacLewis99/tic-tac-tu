@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica", sans-serif;
+  box-sizing: border-box;
+}
+
+.hide-container {
+  display: none;
+}
+
+.header {
+  text-align: center;
+  margin: 15px 0;
+  font-family: "Permanent Marker";
+}
+
+.enter-players {
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+  position: relative;
+}
+
+.input-field {
+  border: 2px solid #000;
+  outline: none;
+  padding: 4px 8px;
+  margin: 0 0 10px 4px;
+  font-size: 18px;   
+}
+
+.input-field:focus {
+  border: 2px solid #E15E32;
+}
+
+.submit-btn {
+  border: 2px solid #000;
+  padding: 8px 8px;
+  font-size: 18px;
+  width: 250px;
+  border-radius: 5px;
+  margin-top: 10px;
+  background-color: #fff;
+}
+
+.submit-btn:active,
+.submit-btn:focus {
+  outline: none;
+  border: 2px solid #E15E32;
+}
+
+.submit-btn:hover {
+  background-color: #ece9e9;
+}
