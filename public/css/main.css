@@ -22,7 +22,7 @@
 
 .board__container {
   width: 40%;
-  background-color: pink;
+  background-color: #6BEFFF;
   margin: 0 auto;
   font-size: 0;
   border: 2px solid #000;
@@ -81,7 +81,7 @@
 .replay-btn:active {
   outline: none;
   color: #fff;
-  background-color: #000;
+  background-color: #6BEFFF;
 }
 
 .congratulations {

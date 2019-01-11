@@ -13,6 +13,7 @@
   text-align: center;
   margin: 15px 0;
   font-family: "Permanent Marker";
+  background-color: #6BEFFF;
 }
 
 .enter-players {
@@ -28,6 +29,7 @@
   padding: 4px 8px;
   margin: 0 0 10px 4px;
   font-size: 18px;
+  background-color: #6BEFFF;
 }
 
 .input-field:focus {
@@ -41,7 +43,7 @@
   width: 250px;
   border-radius: 5px;
   margin-top: 10px;
-  background-color: #fff;
+  background-color: #A5F5FF;
 }
 
 .submit-btn:active,
@@ -51,5 +53,5 @@
 }
 
 .submit-btn:hover {
-  background-color: #ece9e9;
+  background-color: #6BEFFF;
 }
