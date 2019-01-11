@@ -1,6 +1,6 @@
 Omar Tu Isaac
 
-# tic-tac-tu
+tic-tac-tu
 
 ## How it works
 
