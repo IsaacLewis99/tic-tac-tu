@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Helvetica", sans-serif;
   box-sizing: border-box;
 }
 
@@ -54,4 +53,9 @@
 
 .submit-btn:hover {
   background-color: #6BEFFF;
+}
+
+.nav {
+  background-color: #6BEFFF;
+  font-family: 'Permanent Marker';
 }

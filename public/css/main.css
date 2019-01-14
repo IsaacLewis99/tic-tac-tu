@@ -1,3 +1,8 @@
+.nav {
+  background-color: #6BEFFF;
+  font-family: 'Permanent Marker';
+}
+
 .board___player-turn {
   text-align: center;
   margin: 10px 0 10px;
