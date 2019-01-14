@@ -48,4 +48,5 @@ p {
 
 li a:hover {
   background-color: #A5F5FF;
+  color: red;
 }
