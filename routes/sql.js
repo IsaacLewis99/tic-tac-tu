@@ -68,7 +68,7 @@ exports.login = function(req, res) {
       req.session.name = users.name;
       req.session.userID = users.id;
       console.log('User ' + req.session.email + ' logged in, id: ' + req.session.userID);
-      res.redirect('/play');
+      res.redirect('/playername');
     }
     else {
       res.send({
