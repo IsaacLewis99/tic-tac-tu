@@ -3,6 +3,7 @@
   padding: 0;
   font-family: "Helvetica", sans-serif;
   box-sizing: border-box;
+  background-color: #FFF
 }
 
 .hide-container {
@@ -13,7 +14,8 @@
   text-align: center;
   margin: 15px 0;
   font-family: "Permanent Marker";
-  background-color: #6BEFFF;
+  background-color: #FFF;
+
 }
 
 .enter-players {
@@ -29,7 +31,7 @@
   padding: 4px 8px;
   margin: 0 0 10px 4px;
   font-size: 18px;
-  background-color: #6BEFFF;
+  background-color: #FFF;
 }
 
 .input-field:focus {
@@ -43,7 +45,7 @@
   width: 250px;
   border-radius: 5px;
   margin-top: 10px;
-  background-color: #A5F5FF;
+  background-color: #FFF;
 }
 
 .submit-btn:active,

@@ -22,7 +22,6 @@
 
 .board__container {
   width: 40%;
-  background-color: #6BEFFF;
   margin: 0 auto;
   font-size: 0;
   border: 2px solid #000;
@@ -40,6 +39,7 @@
   padding: 20px;
   vertical-align: top;
   font-family: "Permanent Marker";
+  background-color: #6BEFFF;
 }
 
 .board__space--winner {
