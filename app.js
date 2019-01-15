@@ -22,8 +22,10 @@ app.use(function(req, res, next) {
 });
 var sess;
 app.get('/register', (req, res) => res.sendFile(__dirname + '/views/register.html'));
+app.get('/', (req, res) => res.sendFile(__dirname + '/views/register.html'));
 app.get('/login',(req, res) => res.sendFile(__dirname + '/views/login.html'));
 app.get('/playername',(req, res) => res.sendFile(__dirname + '/views/playername.html'));
+app.get('/playbots',(req, res) => res.sendFile(__dirname + '/views/playbots.html'));
 
 app.get('/logout', (req, res) => {
   req.session.userID = null;
