@@ -1,12 +1,5 @@
 const Sequelize = require('sequelize');
 const sequelize = new Sequelize('mysql://root:password@127.0.0.1:3306/tic-tac-tu');
-// //const sequelize = new Sequelize('sequelize test', 'root', null, {
-//   dialect: "mysql",
-//   host: "127.0.0.1",
-   // define: {
-   //   timestamps: false
-   // }
-// });
 
 sequelize.authenticate().then(() => {
   console.log('Connection established');
