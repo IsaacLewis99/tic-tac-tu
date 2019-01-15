@@ -19,7 +19,7 @@ const player = (name) => {
 
  // Initialising the app
 function app() {
-  let inputField = document.querySelector('.input-field').focus();
+  let inputField = document.querySelector('input-field').focus();
 
   const addPlayerForm = document.getElementById('player-form');
   addPlayerForm.addEventListener('submit', addPlayers);
