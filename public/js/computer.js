@@ -4,7 +4,6 @@ const displayController = (() => {
   //display screen elements
   let selectionContainer = document.createElement('div');
   let welcomeMessage = document.createElement('p');
-  let twoPlayer = document.createElement('button');
   let easyComputer = document.createElement('button');
   let hardComputer = document.createElement('button');
   let buttonContainer = document.createElement('table');
@@ -29,7 +28,7 @@ const displayController = (() => {
   selectionContainer.id = "selection-container";
   buttonContainer.id = "button-container";
 
-  buttonContainer.append(easyComputer, hardComputer, twoPlayer);
+  buttonContainer.append(easyComputer, hardComputer);
 
   selectionContainer.append(welcomeMessage, buttonContainer);
 
@@ -47,12 +46,10 @@ const displayController = (() => {
   })
 
   name1input.value = "Player 1";
-  name2input.value = "Player 2";
   nameContainer.id = "name-container";
-  nameMessage.innerHTML = "Input your Names:";
   startGame.innerHTML = "Start Game";
 
-  nameContainer.append(nameMessage, name1input, name2input, startGame);
+  nameContainer.append(nameMessage, name1input, startGame);
   nameContainer.style.display = 'none';
 
   document.body.appendChild(nameContainer);

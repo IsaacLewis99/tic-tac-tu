@@ -1,14 +1,5 @@
-
-* {
-  margin: 0;
-  padding: 0;
-  font-family: "Permanent Marker";
-  box-sizing: border-box;
-}
-
 body{
   margin: 0 auto;
-  display: table;
 }
 
 .play-button{
@@ -19,15 +10,29 @@ body{
 
 .header {
   text-align: center;
+  margin: 15px 0;
+  font-family: "Permanent Marker";
+  background-color: #6BEFFF;
+  font-size: 30px;
+}
+
+#selection-container {
+  margin: 75px 500px 0px 0px;
+  padding: 25px 0px 25px 0px;
+  display: table;
   font-family: "Permanent Marker";
 }
 
-
-#selection-container, #button-container, #name-container{
-  margin: 100px;
-  display: table;
+#button-container, #name-container {
+  margin-left: 525px;
+  position: fixed;
 }
 
+#welcome-message {
+  text-align: center;
+  margin: 80px;
+  margin-left: 400px;
+}
 input{
   height: 30px;
   font-family: "Helvetica", sans-serif;
@@ -70,6 +75,7 @@ button{
   font-family: "Permanent Marker";
 }
 
-#letter {
+.letter {
   font-family: "Permanent Marker";
 }
+

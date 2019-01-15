@@ -1,6 +1,6 @@
 Omar Tu Isaac
 
-# tic-tac-tu
+tic-tac-tu
 
 ## How it works
 
@@ -26,16 +26,33 @@ I want to be able too sign up
 ```
 ```
 As a user
-So that I can see existing stats 
+So that I can see existing stats
 I want to be able to login
 ```
 ```
-As a user 
-So that I can play with my friend 
+As a user
+So that I can play with my friend
 I want to be able to switch over to player v player
 ```
 ```
-As a user 
+As a user
 So I can play tic tac toe on my own
-I want to be able to play against the computer 
+I want to be able to play against the computer
 ```
+## CREATING THE DATABASE
+
+1. Download TablePlus
+2. Create a new connection (MySql)
+  - name = tic-tac-tu
+  - host = localhost
+  - port = 8080
+  - user = root
+  - password = password
+3. create a new database called tic-tac-tu
+4. create a new table called users
+
+## RUNNING THE APP
+
+1. Requires MySql server
+2. Run 'npm install'
+3. To run the app use 'node app.js'
