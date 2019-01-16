@@ -5,27 +5,28 @@
   font-family: "Helvetica", sans-serif;
 }
 
-header {
-  background-color: #FFF;
-  font-size: 30px;
-  font-family: 'Permanent-Marker';
+.header {
+  text-align: center;
+  margin: 15px 0;
+  font-family: "Permanent Marker";
 }
 
 
 body {
   background-color: #FFF;
   text-align: center;
+  background-image: url("Images/BG.jpg");
+
 }
 
 nav {
-  background-color: #FFF;
+
   font-family: 'Permanent-Marker';
 }
 
 ul {
   list-style-type: none;
   height: 70px;
-  background-color: #FFF
 }
 
 li {
@@ -41,7 +42,6 @@ a {
   display: block;
   margin: 10px;
   padding: 8px;
-  background-color: #FFF;
 }
 
 p {
@@ -50,4 +50,24 @@ p {
 
 li a:hover {
   background-color: #A5F5FF;
+}
+
+.input-field {
+  border: 2px solid #000;
+  outline: none;
+  padding: 4px 8px;
+  margin: 0 0 10px 4px;
+  font-size: 18px;
+  background-color: #FFF;
+}
+
+.submit-btn {
+  border: 2px solid #000;
+  padding: 8px 8px;
+  font-size: 18px;
+  width: 250px;
+  border-radius: 5px;
+  margin-top: 10px;
+  background-color: #FFF;
+}
 }
