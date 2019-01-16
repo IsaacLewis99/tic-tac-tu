@@ -9,19 +9,11 @@ body{
   font-size: 100px;
 }
 
-.header1 {
+.header {
   text-align: center;
   font-family: "Permanent Marker";
   background-color: #6BEFFF;
   font-size: 30px;
-}
-
-.header2 {
-  text-align: center;
-  font-family: "Permanent Marker";
-  background-color: #6BEFFF;
-  font-size: 30px;
-
 }
 
 #selection-container {
@@ -38,8 +30,8 @@ body{
 
 #welcome-message {
   text-align: center;
-  margin: 80px;
-  margin-left: 400px;
+  margin-top: 80px;
+  margin-left: 650px;
 }
 input{
   height: 30px;
@@ -53,12 +45,9 @@ input{
 
 p{
   font-family: "Helvetica", sans-serif;
-
-
   font-size: 30px;
   height: 50px;
   margin: 35px auto;
-
 }
 
 button{
@@ -78,7 +67,6 @@ button:focus {
 }
 
 #game-body {
-
   width: 600px;
   height: 600px;
   padding: 15px;
