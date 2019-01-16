@@ -1,7 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <div>
+    <h1 class="header">Tic Tac Tu</h1>
+  </div>
+  <div class="nav-container">
+    <nav class="navbar navbar-inverse" role="navigation" style="padding-left:130px;">
+      <ul class="navlist">
+        <li><a href="/playername">Play With Friend</a></li>
+        <li><a href="/playbots">Play Against Bots</a></li>
+        <li><a href="/register">Register</a></li>
+        <li class="active"><a href="/login">Login</a></li>
+        <li style="float:right"><a href="/logout">Logout</a></li>
+      </ul>
+    </nav>
+  </div>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
@@ -18,20 +31,6 @@
 
 <body>
   <div>
-    <h1 class="header">Tic Tac Toe</h1>
-  </div>
-  <div class="nav-container">
-    <nav class="navbar navbar-inverse" role="navigation" style="padding-left:130px;">
-      <ul class="navlist">
-        <li><a href="/playername">Play With Friend</a></li>
-        <li><a href="/playbots">Play Against Bots</a></li>
-        <li><a href="/register">Register</a></li>
-        <li class="active"><a href="/login">Login</a></li>
-        <li style="float:right"><a href="/logout">Logout</a></li>
-      </ul>
-    </nav>
-  </div>
-  <div>
     <p>Sign in</p>
     <form action="/login" method="POST" class="form-horizontal"><br>
       <input type="text" email="email_r" name="email" placeholder="Email"><br>
@@ -39,5 +38,5 @@
       <input type="submit" name="Submit" value="Enter" class="btn"><br>
     </form>
 </body>
-
+</div>
 </html>
