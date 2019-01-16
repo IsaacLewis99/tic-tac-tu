@@ -1,10 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-<<<<<<< Updated upstream
-=======
   font-family: "Permanent Marker";
->>>>>>> Stashed changes
   box-sizing: border-box;
 }
 
@@ -32,11 +29,13 @@
   padding: 4px 8px;
   margin: 0 0 10px 4px;
   font-size: 18px;
-  background-color: #FFF;
+  background-color: grey;
 }
 
+.input-field:active,
 .input-field:focus {
   border: 2px solid #E15E32;
+  background-color: white;
 }
 
 .submit-btn {
@@ -46,7 +45,7 @@
   width: 250px;
   border-radius: 5px;
   margin-top: 10px;
-  background-color: #FFF;
+  background-color: grey;
 }
 
 .submit-btn:active,
@@ -56,5 +55,5 @@
 }
 
 .submit-btn:hover {
-  background-color: #6BEFFF;
+  background-color: white;
 }

@@ -12,7 +12,7 @@ header {
 body {
   background-color: #FFF;
   text-align: center;
-  background-image: url("Images/BG.jpg");
+  background-image: linear-gradient(to right, grey, white);
 
 }
 
@@ -30,6 +30,7 @@ li {
   float: left;
   font-size: 18px;
   border: 2px;
+  color: black;
 }
 li:last-child {
 
@@ -46,11 +47,11 @@ p {
 }
 
 li a:hover {
-  background-color: #A5F5FF;
-  color: red;
+  background-color: silver;
+  color: black;
 }
 
-.input-field {
+input-field {
   border: 2px solid #000;
   outline: none;
   padding: 4px 8px;
@@ -59,7 +60,7 @@ li a:hover {
   background-color: #FFF;
 }
 
-.submit-btn {
+submit-btn {
   border: 2px solid #000;
   padding: 8px 8px;
   font-size: 18px;
