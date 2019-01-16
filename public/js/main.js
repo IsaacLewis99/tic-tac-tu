@@ -2,7 +2,7 @@
 
 window.addEventListener('load', app);
 
-let gameBoard = ['', '', '', '', '', '', '', '', '']; 
+let gameBoard = ['', '', '', '', '', '', '', '', ''];
 let turn = 0; // Keeping track on if it's X or O player's turn
 let winner = false;
 let scoreOne = 0;
@@ -61,10 +61,10 @@ function buildBoard() {
 // Click event when player attempts to make a move on specific space
 function makeMove(event) {
   console.log(turn);
-  
+
   let currentSpace = parseInt(event.currentTarget.firstElementChild.dataset.id);
   let spaceToAddToken = document.querySelector(`[data-id='${currentSpace}']`);
-  
+
   if (spaceToAddToken.innerHTML !== '') {
     console.log('This space is already taken.');
     return;
@@ -77,10 +77,10 @@ function makeMove(event) {
       gameBoard[currentSpace] = 'O';
     }
   }
-    
+
   // Check if there is a winner at the moment
   isWinner();
-    
+
   // Updating turn count to switch the turn to the other player
   turn ++;
 
@@ -133,14 +133,14 @@ function isWinner() {
       gameBoard[space3] === currentPlayer()
     ) {
 
-      
+
       const spaces = document.querySelectorAll('.board__space');
       let letterId1 = document.querySelector(`[data-id='${space1}']`);
       let letterId2 = document.querySelector(`[data-id='${space2}']`);
       let letterId3 = document.querySelector(`[data-id='${space3}']`);
-      
+
       spaces.forEach( space => {
-        let spaceId = space.firstElementChild.dataset.id;	
+        let spaceId = space.firstElementChild.dataset.id;
 
         if (spaceId == space1 || spaceId == space2 || spaceId == space3 ) {
           space.classList.add('board__space--winner');
@@ -173,15 +173,15 @@ function isWinner() {
   if (!winner) {
     checkIfTie();
   }
-  
+
   return false;
 }
 
 function resetBoard() {
   console.log('resetting');
-  
-  gameBoard = ['', '', '', '', '', '', '', '', '']; 
-  
+
+  gameBoard = ['', '', '', '', '', '', '', '', ''];
+
   let spaceToAddToken = document.querySelectorAll('.letter');
   spaceToAddToken.forEach( square => {
     square.textContent = '';
@@ -224,7 +224,7 @@ window.addEventListener("resize", onResize);
 function onResize() {
   let allSpaces = document.querySelectorAll('.board__space');
   let spaceHeight = allSpaces[0].offsetWidth;
-  
+
   allSpaces.forEach( space => {
     space.style.height = `${spaceHeight}px`;
   });
@@ -240,9 +240,9 @@ function updateScore() {
     scoreTwo ++;
   }
   scoreOneText.innerHTML = `
-  <div class="thescore">${playerX.name}: ${scoreOne}</div>
+  <div class="thescore">${playerX.name} : ${scoreOne}</div>
   `;
   scoreTwoText.innerHTML = `
-  <div class="thescore2">${playerY.name}: ${scoreTwo}</div>
+  <div class="thescore2">${playerY.name} : ${scoreTwo}</div>
   `;
 }

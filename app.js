@@ -20,6 +20,24 @@ app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
+
+app.set('view engine', 'ejs');
+app.get('/playername', function (req, res) {
+  if (req.session.userID == null) {
+    res.redirect('/login');
+  }
+  else {
+    res.render('playervsplayer.ejs')
+  }
+})
+
+app.get('/playbots', function (req, res) {
+  if (req.session.userID == null) {
+    res.redirect('/login');
+  }
+  else {
+  res.render('playbots.ejs')}
+})
 var sess;
 app.get('/register', (req, res) => res.sendFile(__dirname + '/views/register.html'));
 app.get('/', (req, res) => res.sendFile(__dirname + '/views/register.html'));

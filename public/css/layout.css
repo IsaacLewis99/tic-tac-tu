@@ -2,13 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Helvetica", sans-serif;
 }
 
-.header {
-  text-align: center;
-  margin: 15px 0;
-  font-family: "Permanent Marker";
+header {
+  background-color: #6BEFFF;
+  font-size: 30px;
+  font-family: 'Permanent Marker';
 }
 
 
@@ -50,6 +49,7 @@ p {
 
 li a:hover {
   background-color: #A5F5FF;
+  color: red;
 }
 
 .input-field {

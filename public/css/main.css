@@ -74,14 +74,14 @@
     font-size: 16px;
     margin-top: 12px;
     word-spacing: 3px;
-    background-color: #fff;
+    background-color: #6BEFFF;
 }
 
 .replay-btn:hover,
 .replay-btn:active {
   outline: none;
-  color: #fff;
-  background-color: #6BEFFF;
+  color: #000000;
+  background-color: #fff;
 }
 
 .congratulations {
