@@ -3,3 +3,12 @@ describe("resetBoard", function() {
     expect(gameBoard).toEqual(['','','','','','','','','']);
   });
 });
+
+describe("players", function() {
+  it('player x has a name', function() {
+    expect(playerX).toEqual({name: ''});
+  });
+  it('player y has a name', function() {
+    expect(playerY).toEqual({name: ''});
+  });
+});
