@@ -1,23 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <header>Tic-Tac-Tu</header>
   <meta charset="UTF-8">
-  <div class="register">
-    <link rel="stylesheet" type="text/css" href="css/layout.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log out</title>
+  <meta name="author" content="Rob Hitt">
+  <meta name="description" content="Tic Tac Toe">
+
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css" type="text/css">
+  <link rel="stylesheet" href="css/playername.css" type="text/css">
+  <link rel="stylesheet" href="css/layout.css" type="text/css">
+
+  <script type="text/javascript" src="js/main.js"></script>
+</head>
+
+<body>
+  <div>
+    <h1 class="header">Tic Tac Toe</h1>
+  </div>
+  <div class="nav-container">
     <nav class="navbar" role="navigation" style="padding-left:130px;">
-      <ul class="nav navbar-nav">
-        <li><a href="/playername">Play</a></li>
+      <ul class="navlist">
+        <li><a href="/playername">Play With Friend</a></li>
+        <li><a href="/playbots">Play Against Bots</a></li>
         <li><a href="/register">Register</a></li>
         <li><a href="/login">Login</a></li>
         <li style="float:right"><a class="active" href="/logout">Logout</a></li>
       </ul>
     </nav>
   </div>
-</head>
-<body>
   <div class="jumbotron">
     <p>Successfully logged out</p>
-</div>
+  </div>
 </body>
+
 </html>

@@ -1,27 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<header>Tic-Tac-Tu</header>
+
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <meta name="author" content="Rob Hitt">
+  <meta name="description" content="Tic Tac Toe">
+
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css" type="text/css">
+  <link rel="stylesheet" href="css/playername.css" type="text/css">
+  <link rel="stylesheet" href="css/layout.css" type="text/css">
+
+  <script type="text/javascript" src="js/main.js"></script>
+</head>
+
+<body>
   <div>
-    <link rel="stylesheet" type="text/css" href="/css/layout.css">
+    <h1 class="header">Tic Tac Toe</h1>
+  </div>
+  <div class="nav-container">
     <nav class="navbar navbar-inverse" role="navigation" style="padding-left:130px;">
-      <ul class="nav navbar-nav">
-        <li><a href="/playername">Play</a></li>
+      <ul class="navlist">
+        <li><a href="/playername">Play With Friend</a></li>
+        <li><a href="/playbots">Play Against Bots</a></li>
         <li><a href="/register">Register</a></li>
         <li class="active"><a href="/login">Login</a></li>
         <li style="float:right"><a href="/logout">Logout</a></li>
       </ul>
     </nav>
   </div>
-</head>
-<body>
   <div>
     <p>Sign in</p>
-      <form action="/login" method="POST" class="form-horizontal"><br>
-        <input type="text" email="email_r" name="email" placeholder="Email"><br>
-        <input type="password" password="password_r" name="password" placeholder="Password"><br>
-        <input type="submit" name="Submit" value="Enter" class="btn"><br>
-      </form>
+    <form action="/login" method="POST" class="form-horizontal"><br>
+      <input type="text" email="email_r" name="email" placeholder="Email"><br>
+      <input type="password" password="password_r" name="password" placeholder="Password"><br>
+      <input type="submit" name="Submit" value="Enter" class="btn"><br>
+    </form>
 </body>
+
 </html>
