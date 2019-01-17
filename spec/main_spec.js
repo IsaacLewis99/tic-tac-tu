@@ -12,3 +12,12 @@ describe("players", function() {
     expect(playerY).toEqual({name: ''});
   });
 });
+
+describe("player score", function() {
+  it('player 1 has no score at start of the game', function() {
+    expect(scoreOne).toEqual(0)
+  });
+  it('player 2 has no score at start of the game', function() {
+    expect(scoreTwo).toEqual(0)
+  });
+});
