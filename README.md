@@ -21,12 +21,10 @@ tic-tac-tu
 ## USER STORIES
 ```
 As a user
-So that I can see my statistics on how I’ve played
-I want to be able too sign up
+I want to be able to sign up
 ```
 ```
 As a user
-So that I can see existing stats
 I want to be able to login
 ```
 ```
